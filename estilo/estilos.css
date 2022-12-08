@@ -1,0 +1,197 @@
+* {
+    -webkit-box-sizing: border-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(190, 183, 183);
+    top: 0px;
+}
+
+/*Parte de abajo entera*/
+.partedeabajo {
+    background-color: blue;
+    margin-top: 10px;
+}
+
+/*Parte de arriba de la barra de busqueda*/
+.panelprincipal {
+    text-align: center;
+    height: 450px;
+    width: 100%;
+    border-top: 0px;
+    
+
+}
+
+/*Esto es para la barra de navegacion*/
+.navbar {
+    position: -webkit-sticky;
+    position: sticky;
+    background-color: black;
+    top: 0; /*es necesario especipicar el menos un top*/
+    z-index: 20000;
+    margin: 0%;
+
+}
+
+.navbar li {
+    display: inline-block;
+}
+
+.navbar a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 50px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: white;
+    /*Color de la caja al pasar el cursor*/
+    color: black;
+}
+
+
+/*Esto es para la barra lateral left*/
+
+.barraleft {
+    padding: 0;
+    width: 150px;
+    background-color: white;
+    position: absolute;
+    height: 300px;
+    overflow: auto;
+}
+
+/* Sidebar links */
+.barraleft a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+}
+
+
+/*Esto es para la barra lateral right de redes sociales*/
+
+.barraright {
+    float: right;
+    top: 55%;
+    width: 4%;
+    position: sticky;
+    text-align: center;
+    z-index: 1000;
+    /*background-color: violet;*/
+    overflow: auto;
+    height: 300px;
+    margin: 0;
+    padding-bottom: 0;
+    
+}
+
+
+.redessociales {
+    display: block;
+    text-align: center;
+    padding: 0px;
+    margin: 0%;
+    color: white;
+    font-size: 20px;
+    list-style: none;
+    
+}
+
+.barraright ul li img:hover{
+    background-color: blueviolet;
+}
+
+/*Estilos de cada redsocial*/
+.Facebook {
+    background-color: blue;
+
+}
+
+.Instagram {
+    background-color: rgb(221, 134, 149);
+
+}
+
+.Twitter {
+    background-color: cadetblue;
+
+}
+
+/*Tamaño img de los logos*/
+
+img.Facebook{
+    width: 90%;
+    height: 90%;
+}
+
+img.Instagram{
+    width: 90%;
+    height: 90%;
+}
+
+img.Twitter{
+    width: 90%;
+    height: 90%;
+}
+
+
+/*Esto es para la barra lateral center*/
+.barracenter {
+    background-color: rgb(161, 189, 38);
+    margin-top: 100px;
+    margin-left: 150px;
+    margin-right: 400px;
+    width: 82%;
+    z-index: 800;
+    
+}
+
+
+/*Esto es para el pie de la página*/
+
+.pie{
+    background-color: cyan;
+
+}
+
+/*Imagen de fondo parte de arriba*/
+
+header{
+    background-image: url(../img/fondos/imagensup.jpg);
+    background-size: 100% 100%;
+    background-repeat:no-repeat;
+}
+
+/*Titulo inicial del proyecto*/
+
+.tituloinicial{
+    margin: 0px; /*para quitar lel espacio que se genera al poner el h1*/
+}
+
+
+
+/*https://www.webucator.com/article/how-to-create-a-horizontal-navigation-menu-with-cs/*/
+/*https://www.w3schools.com/css/tryit.asp?filename=trycss_website_layout_blog*/
+/*https://www.daypo.com/buscar.php?t=tema+2+dhcp*/
+
+/*@media screen and (max-width: 980px){
+    #contenedor{
+        width: 90%;
+    }
+    #contenido{
+        width: 60%;
+    }
+    #barra_lateral{
+        width:30%;
+    }
+}*/ 
