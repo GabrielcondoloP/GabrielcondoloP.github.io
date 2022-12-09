@@ -14,18 +14,22 @@ body {
 
 /*Parte de abajo entera*/
 .partedeabajo {
-    background-color: blue;
-    margin-top: 10px;
+    margin-top: 0px;
+    background-image: url(../img/fondoabajo/paisaje.png); /*imagen del fondo de la parte inferior*/
+    background-size: 100% 100%;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
 }
 
 /*Parte de arriba de la barra de busqueda*/
+
+
+
 .panelprincipal {
     text-align: center;
     height: 450px;
     width: 100%;
     border-top: 0px;
-    
-
 }
 
 /*Esto es para la barra de navegacion*/
@@ -47,7 +51,7 @@ body {
     float: left;
     color: white;
     text-align: center;
-    padding: 14px 50px;
+    padding: 20px 50px;
     text-decoration: none;
 }
 
@@ -57,44 +61,54 @@ body {
     color: black;
 }
 
-
-/*Esto es para la barra lateral left*/
+/*Para la barra de nav lateral left*/
 
 .barraleft {
+    margin: 0;
     padding: 0;
-    width: 150px;
-    background-color: white;
-    position: absolute;
-    height: 300px;
+    width: 8%;
+    background-color: black;
+    position: sticky;
+    height: 23%;
     overflow: auto;
-}
-
-/* Sidebar links */
-.barraleft a {
+    top: 50%;
+  }
+  
+  /* Para los links */
+  .barraleft a {
     display: block;
-    color: black;
+    color: white;
     padding: 16px;
     text-decoration: none;
-}
-
+  }
+  
+  /* Para el primer link */
+  .barraleft a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+  /* Para que el primer link al pasar el raton no cambie de color como el resto*/
+  .barraleft a:hover:not(.active) {
+    background-color: white;
+    color: black;
+  }
 
 /*Esto es para la barra lateral right de redes sociales*/
 
 .barraright {
     float: right;
-    top: 55%;
-    width: 4%;
+    top: 60%;
+    width: 3%;
     position: sticky;
     text-align: center;
     z-index: 1000;
-    /*background-color: violet;*/
     overflow: auto;
     height: 300px;
     margin: 0;
     padding-bottom: 0;
     
 }
-
 
 .redessociales {
     display: block;
@@ -104,65 +118,134 @@ body {
     color: white;
     font-size: 20px;
     list-style: none;
-    
 }
 
 .barraright ul li img:hover{
-    background-color: blueviolet;
+    background-color: goldenrod;
 }
 
-/*Estilos de cada redsocial*/
+/*color de fondo de cada redsocial*/
 .Facebook {
     background-color: blue;
-
+    border-radius: 11px;
 }
 
 .Instagram {
     background-color: rgb(221, 134, 149);
-
+    border-radius: 12px;
 }
 
 .Twitter {
     background-color: cadetblue;
-
+    border-radius: 11px;
 }
 
 /*Tamaño img de los logos*/
 
 img.Facebook{
-    width: 90%;
-    height: 90%;
+    width: 80%;
+    height: 80%;
 }
 
 img.Instagram{
-    width: 90%;
-    height: 90%;
+    width: 80%;
+    height: 80%;
 }
 
 img.Twitter{
-    width: 90%;
-    height: 90%;
+    width: 80%;
+    height: 80%;
 }
 
 
 /*Esto es para la barra lateral center*/
-.barracenter {
-    background-color: rgb(161, 189, 38);
-    margin-top: 100px;
-    margin-left: 150px;
-    margin-right: 400px;
-    width: 82%;
-    z-index: 800;
+
+
+
+.tituloinicial{
+    margin: 0px; /*para quitar lel espacio que se genera al poner el h1*/
+    text-shadow: gray 0 6px;
+    font-size: 550%;
+    font-weight: bold;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 10%;
     
 }
 
 
-/*Esto es para el pie de la página*/
-
-.pie{
-    background-color: cyan;
-
+.barracenter {
+    background-color: khaki;
+    margin-top: 5%;
+    margin-left: 154px;
+    margin-right: 400px;
+    width: 89%;
+    z-index: 800;
+    border: 1px;
+    border-radius: 19px;
+    
 }
+
+.barracenter p {
+    column-rule: black solid 2px;
+    columns: 3 500px;
+    text-align: justify;
+    /*word-wrap: break-word;*/
+    
+}
+
+/*Para las columnas de img y texto*/
+
+/* con el % determino el tamaño que ocupara la imagen, menos %. más img podré introducir en la misma linea */
+
+.mishob{
+    text-align: center;
+    margin-bottom: 30px;
+    padding-top: 30px;
+    letter-spacing: 50px
+}
+
+div.columnass{
+    column-count: 3;
+    column-gap: 3rem;
+    column-rule:4px double black;
+}
+
+p.uno{
+    color: black;
+    text-align: center;
+    padding: 15px 15px;
+    break-inside: avoid;
+    padding-bottom: 2rem;
+    text-decoration: overline;
+}
+
+p.uno::first-letter {
+    font-size: 160%;
+    color: darkorchid;
+  }
+
+.column {
+    float: left;
+    width: 33%;
+    padding: 5px;
+    
+  }
+  
+/* para que la imagen se introduzca en el barracenter */
+.colum123::after {  /*after es como el clear, para indicar que lo siguiende debe ir despues para no colapsar*/
+    /*content: "";*/
+    clear: both;
+    display: table;
+}
+
+.par2{
+    clear: left; /* clear left se usa para que no admita nada a su left, es complemetaria del float*/
+    margin-bottom: 15px;
+    padding-top: 15px;
+}
+  
 
 /*Imagen de fondo parte de arriba*/
 
@@ -174,24 +257,41 @@ header{
 
 /*Titulo inicial del proyecto*/
 
-.tituloinicial{
-    margin: 0px; /*para quitar lel espacio que se genera al poner el h1*/
+
+/*Para el footer*/
+.linksfoot {
+    display: inline-grid;
+    grid-auto-flow: row;
+    grid-row-end: 24px;
+    justify-items: center;
+    margin: auto;
+    color: white;
+    text-decoration: none;
 }
 
 
+.linfoot {
+    color: white;
+    text-decoration: none;
+    border-radius: 19px;
+}
 
-/*https://www.webucator.com/article/how-to-create-a-horizontal-navigation-menu-with-cs/*/
-/*https://www.w3schools.com/css/tryit.asp?filename=trycss_website_layout_blog*/
-/*https://www.daypo.com/buscar.php?t=tema+2+dhcp*/
+.linksfoot li {
+    list-style: none;
+    padding: 3px 3px;
+}
 
-/*@media screen and (max-width: 980px){
-    #contenedor{
-        width: 90%;
-    }
-    #contenido{
-        width: 60%;
-    }
-    #barra_lateral{
-        width:30%;
-    }
-}*/ 
+.linfoot:hover {
+    background-color: white;
+    color: black;
+}
+
+
+.pie {
+    display: flex;
+    height: 200px;
+    width: 100%;
+    background-color: black;
+    line-height: 1.3;
+    font-family: Menlo, monospace;
+}
