@@ -13,7 +13,7 @@
 
 <body>
     <header class="panelprincipal">
-        <h1 class="tituloinicial"> SI</h1>
+        <h1 class="tituloinicial"> Proyecto HTML y CSS</h1>
     </header>
 
     <ul class="navbar">
@@ -24,34 +24,93 @@
     </ul>
     <div class="partedeabajo">
         <nav class="barraleft">
-            <h5>Barra</h5>
-            <ul>
-                <li>Uno</li>
-                <li>Dos</li>
-                <li>TRE</li>
-                <li>Cuatro</li>
-                <li>Cinco</li>
-            </ul>
+            <a class="active" href="#">Inicio</a>
+            <a href="#90">Sobre</a>
         </nav>
 
         <aside class="barraright">
             <ul class="redessociales">
-                <li><a href="https://www.facebook.com/profile.php?id=100088319539944"><img src="../img/logos/pequeno-logotipo-de-facebook.png" class="Facebook"/></a></li>
-                <li><a href="https://www.instagram.com/gabriel_00510/" title="example"><img src="../img/logos/logotipo-de-instagram.png" class="Instagram"/></a></li>
-                <li><a href="https://twitter.com/Gabriel95370322/with_replies"><img src="../img/logos/twitter-forma-negra.png" class="Twitter"/></a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=100088319539944" ><img src="../img/logos/pequeno-logotipo-de-facebook.png" class="Facebook" alt="facebook"></a></li>
+                <li><a href="https://www.instagram.com/gabriel_00510/" ><img src="../img/logos/logotipo-de-instagram.png" class="Instagram" alt="instagram"></a></li>
+                <li><a href="https://twitter.com/Gabriel95370322/with_replies" ><img src="../img/logos/twitter-forma-negra.png" class="Twitter" alt="twitter"></a></li>
             </ul>
         </aside>
 
         <main class="barracenter">
-            <h1>Forlmulario para contacto</h1>
-           
+            <h1 class="mishob">Formulario para contacto</h1>
+            <fieldset>
+                <legend>Datos de la empresa</legend>
+                <p>
+                    Nombre: <input type="text" name="nombre" >
+                </p>
+                <p>
+                    Dirección: <input type="text" name="direccion" size="50" placeholder="calle,número y piso" >
+                </p>
+                <p>e-mail: <input type="email" name="correo" size="40"></p>
+                <p>Tipo de empresa</p>
+                <label><input type="radio" name="empresa" value="a" >Empresa Local</label> 
+                <label><input type="radio" name="empresa" value="b" > Empresa Nacional</label>
+                <label><input type="radio" name="empresa" value="c" > Empresa Internacional</label>
+            </fieldset>
+            <fieldset>
+                <legend>Nivel de estudios requeridos por la empresa</legend>
+                <p>Nivel de estudios:
+                    <label><input type="radio" name="estudios" value="1" checked="checked" >Ninguno</label>
+                    <label><input type="radio" name="estudios" value="2" > E.S.O.</label>
+                    <label><input type="radio" name="estudios" value="3" > Bachiller </label>
+                    <label><input type="radio" name="estudios" value="4" > Formación profesional</label>
+                    <label><input type="radio" name="estudios" value="5" > Universidad</label>
+                </p>
+                <p>Habilidades sociales requeridas: 
+                    <label><input type="checkbox" name="ninguno" > Ninguno</label>
+                    <label><input type="checkbox" name="escucha" > Escucha Activa</label>
+                    <label><input type="checkbox" name="enseñar" > Saber enseñar</label>
+                    <label><input type="checkbox" name="ayuda" > Pedir ayuda</label>
+                    <label><input type="checkbox" name="humor" > Sentido del humor</label>
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Datos adicionales</legend>
+                <p>Frecuencia de pagos:</p>
+                <p><select name="frecuencia">
+                        <option>semanal</option>
+                        <option>quincenal</option>
+                        <option>mensual</option>
+                        <option>bimensual</option>
+                    </select></p>
+                <p>Si la empresa necesita adjuntar alguna documentación, aquí puede hacerlo:</p>
+                <p>Enviar documento: <input type="file" name="Documento" /> </p>
+                <p>Nivel de satisfacción: (más color en la barra,mayor satisfacción)
+                    <input type="range" name="rango" min="1" max="10" step="3">
+                </p>
 
-        <footer class="pie">
-            <h5>contacto?</h5>
-            <li></li>
-            <li></li>
-            <li></li>
-        </footer>
+                <p>Si desea enviar una opinión o algo más:
+                    <textarea name="texto" rows="4" cols="40" placeholder="Escriba algo"></textarea>
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Comenzar de nuevo</legend>
+                <p>Borrar todos los datos del formulario y volver a empezar:
+                    <input type="reset" value="borrar todo" />
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>enviar</legend>
+                <p>Enviar formulario:</p>
+                <p><input type="submit" value="Enviar"></p>
+            </fieldset>
+        </main>    
+            <footer class="pie" id="90">
+                <ul class="linksfoot">
+                    <li><a href="https://www.mclibre.org/consultar/htmlcss/index.html" class="linfoot">McLibre</a></li>
+                    <li><a href="https://www.w3schools.com/" class="linfoot">W3Schools</a></li>
+                    <li><a href="mailto:gabriel.condolo@educa.madrid.org" class="linfoot">Email</a></li>
+                    <li><a href="https://github.com/GabrielcondoloP" class="linfoot">Github</a></li>
+                    <li class="adios">
+                    <p>🧿 </p>
+                    </li>
+                </ul>
+            </footer>
     </div>
 </body>
 
