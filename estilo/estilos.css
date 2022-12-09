@@ -187,14 +187,6 @@ img.Twitter{
     
 }
 
-.barracenter p {
-    column-rule: black solid 2px;
-    columns: 3 500px;
-    text-align: justify;
-    /*word-wrap: break-word;*/
-    
-}
-
 /*Para las columnas de img y texto*/
 
 /* con el % determino el tamaño que ocupara la imagen, menos %. más img podré introducir en la misma linea */
@@ -226,6 +218,48 @@ p.uno::first-letter {
     color: darkorchid;
   }
 
+.personalidad{
+    text-align: center;
+    margin-bottom: 30px;
+    padding-top: 50px;
+    letter-spacing: 50px
+}
+
+p.par2{
+    clear: left; /* clear left se usa para que no admita nada a su left, es complemetaria del float*/
+    margin-bottom: 15px;
+    padding-top: 15px;
+    margin-left: 30px;
+    border-style: dotted;
+    border-color: blue;
+    text-transform: capitalize;
+    color: blueviolet;
+}
+
+/*Para el CV, las tablas e img*/
+
+.yo{
+    width: 8%;
+    margin-top: -315px;
+    margin-right: 40%;
+    padding-top: 0.4%;
+    padding-right: 1%;
+    padding-left: 1%;
+    padding-bottom: 10%;
+    background-color: #04AA6D;
+    float: right;
+}
+
+col{
+    background-color: aquamarine;
+}
+
+.celda1{
+    height: 150px;
+}
+
+
+/*img del index*/
 .column {
     float: left;
     width: 33%;
@@ -235,15 +269,9 @@ p.uno::first-letter {
   
 /* para que la imagen se introduzca en el barracenter */
 .colum123::after {  /*after es como el clear, para indicar que lo siguiende debe ir despues para no colapsar*/
-    /*content: "";*/
+    content: "";
     clear: both;
     display: table;
-}
-
-.par2{
-    clear: left; /* clear left se usa para que no admita nada a su left, es complemetaria del float*/
-    margin-bottom: 15px;
-    padding-top: 15px;
 }
   
 
